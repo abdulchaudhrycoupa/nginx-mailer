@@ -40,7 +40,7 @@ ExternalProject_Add(nginx
     URL ${NGINX_URL}
     SOURCE_DIR ${NGINX_SOURCE_DIR}
     BINARY_DIR ${NGINX_BINARY_DIR}
-    CONFIGURE_COMMAND ${CMAKE_COMMAND} -E env "SHELL=/bin/bash" ${NGINX_SOURCE_DIR}/configure --prefix=${NGINX_BINARY_DIR}/install
+    CONFIGURE_COMMAND ${CMAKE_COMMAND} -E env "SHELL=/bin/bash" ${NGINX_SOURCE_DIR}/configure --prefix=${NGINX_BINARY_DIR}/install --with-mail
     BUILD_COMMAND $(MAKE)
     INSTALL_COMMAND ""  # Empty string to skip install step
     BUILD_IN_SOURCE 1
